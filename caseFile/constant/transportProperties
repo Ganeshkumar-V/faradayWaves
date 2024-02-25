@@ -1,0 +1,43 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+phases          (water air);
+
+water
+{
+    transportModel  Newtonian;
+    nu              2.3e-5;
+    rho             950;
+}
+
+air
+{
+    transportModel  Newtonian;
+    nu              1.409e-5;
+    rho             1.293;
+}
+
+sigma           0.2108505;
+
+// Faraday wave parameters
+A1		20;
+A2      60;
+w0		188.5;
+m       2;
+n       3;
+theta   0;
+// ************************************************************************* //
